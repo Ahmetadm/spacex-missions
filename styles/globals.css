@@ -25,3 +25,15 @@ ul {
 * {
   box-sizing: border-box;
 }
+
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 650px) {
+  main {
+    width: 95%;
+  }
+}

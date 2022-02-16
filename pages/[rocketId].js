@@ -1,14 +1,26 @@
 import { gql } from "@apollo/client";
-import { Box, Paper, Typography } from "@material-ui/core";
-import Link from "next/link";
+import { Box } from "@material-ui/core";
+import Head from "next/head";
+import React from "react";
 import client from "../apollo-client";
 import RocketDetail from "../components/RocketDetail";
 
 const RocketDetailsPage = ({ rocket }) => {
   return (
-    <Box padding={5}>
-      <RocketDetail data={rocket} />
-    </Box>
+    <React.Fragment>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="description" content={`SpaceX ${rocket.name} Details`} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+          key="viewport"
+        />
+      </Head>
+      <Box padding={5}>
+        <RocketDetail data={rocket} />
+      </Box>
+    </React.Fragment>
   );
 };
 
@@ -45,16 +57,8 @@ export async function getStaticPaths() {
     query: gql`
       {
         launchesPast {
-          id
-          details
-          launch_date_local
-          links {
-            mission_patch
-          }
-          mission_name
           rocket {
             rocket {
-              name
               id
             }
           }

@@ -1,4 +1,3 @@
-import { printIntrospectionSchema } from "graphql";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {

@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Button, Typography } from "@material-ui/core";
+import { AppBar, Box, Toolbar, Typography } from "@material-ui/core";
 import Link from "next/link";
 Link;
 const Navbar = () => {

@@ -3,7 +3,6 @@ import Link from "next/link";
 import MissionCard from "./MissionCard";
 
 const MissionList = ({ launches }) => {
-  console.log(launches);
   return (
     <Grid container spacing={6} px={10} component="ul">
       {launches.map((launch) => (

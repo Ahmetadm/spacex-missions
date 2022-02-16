@@ -23,7 +23,7 @@ const RocketDetail = ({ data }) => {
           <Grid item xs={12} md={4}>
             <Box pt={2}>
               <Typography variant="h6">Height:</Typography>
-              <Typography variant="h6" color="Primary">
+              <Typography variant="h6" color="primary">
                 {data.height.meters} meters
               </Typography>
             </Box>
@@ -31,7 +31,7 @@ const RocketDetail = ({ data }) => {
           <Grid item xs={12} md={4}>
             <Box pt={2}>
               <Typography variant="h6">Weight:</Typography>
-              <Typography variant="h6" color="Primary">
+              <Typography variant="h6" color="primary">
                 {data.mass.kg} kilograms
               </Typography>
             </Box>
@@ -40,7 +40,7 @@ const RocketDetail = ({ data }) => {
           <Grid item xs={12} md={4}>
             <Box pt={2}>
               <Typography variant="h6">Country:</Typography>
-              <Typography variant="h6" color="Primary">
+              <Typography variant="h6" color="primary">
                 {data.country}
               </Typography>
             </Box>

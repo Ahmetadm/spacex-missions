@@ -8,11 +8,11 @@ import {
 } from "@material-ui/core";
 import Image from "next/image";
 
-const MissionCard = (props) => {
+const MissionCard = ({ missionName, description, rocketName, date, img }) => {
   return (
     <Card sx={{ maxWidth: 300, height: 500 }}>
-      {props.img ? (
-        <CardMedia component="img" height="300" image={props.img} alt="text" />
+      {img ? (
+        <CardMedia component="img" height="300" image={img} alt="text" />
       ) : (
         <CardMedia
           component="img"
@@ -24,11 +24,11 @@ const MissionCard = (props) => {
 
       <CardContent>
         <Typography gutterBottom variant="button" component="h2">
-          <strong>{props.missionName}</strong>
+          <strong>{missionName}</strong>
         </Typography>
-        {props.description ? (
+        {description ? (
           <Typography variant="body2" component="p">
-            {String(props.description).slice(0, 200).concat("...")}
+            {String(description).slice(0, 200).concat("...")}
           </Typography>
         ) : (
           <Typography variant="body2">NO DETAILS WERE PROVIDED</Typography>
@@ -36,11 +36,11 @@ const MissionCard = (props) => {
 
         <CardActions>
           <Button fullWidth size="large" variant="contained" color="primary">
-            Rocket: {props.rocketName}
+            Rocket: {rocketName}
           </Button>
         </CardActions>
         <Typography variant="caption" color="primary">
-          Launch Date: {new Date(props.date).toLocaleDateString()}
+          Launch Date: {new Date(date).toLocaleDateString()}
         </Typography>
       </CardContent>
     </Card>

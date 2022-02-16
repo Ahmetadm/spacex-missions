@@ -31,6 +31,15 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+.readMore {
+  color: #3f51b5;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.readMore:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 650px) {
   main {
